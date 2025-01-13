@@ -39,10 +39,19 @@ func (g ConfigHealth) GetService() string {
 	return g.service
 }
 
+type ConfigOpenAI struct {
+	apiKey string
+}
+
+func (g ConfigOpenAI) GetAPIKEy() string {
+	return g.apiKey
+}
+
 type Config struct {
 	restConfig   ConfigRest
 	urlConfig    ConfigURL
 	healthConfig ConfigHealth
+	openaiConfig ConfigOpenAI
 }
 
 func (g Config) GetRestConfig() ConfigRest {
@@ -55,4 +64,8 @@ func (g Config) GetUrlConfig() ConfigURL {
 
 func (g Config) GetHealthConfig() ConfigHealth {
 	return g.healthConfig
+}
+
+func (g Config) GetOpenAIConfig() ConfigOpenAI {
+	return g.openaiConfig
 }

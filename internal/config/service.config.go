@@ -29,5 +29,8 @@ func NewConfig() *Config {
 		healthConfig: ConfigHealth{
 			service: service,
 		},
+		openaiConfig: ConfigOpenAI{
+			apiKey: os.Getenv("OPENAI_API_KEY"),
+		},
 	}
 }
