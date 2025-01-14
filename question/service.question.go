@@ -122,7 +122,7 @@ func (s *Service) SecondStep(ctx context.Context, channel chan domain.QuestionSt
 	channel <- domain.QuestionStatus{Status: "Combining Results", Message: ""}
 
 	promt := "Give me a short fun fact using maxomum 20 words about this topic %s witten in %s"
-	go s.LLM(ctx, &wgSecondStep, results, fmt.Sprintf(promt, language, summary), domain.DataTypeEnumRESULT)
+	go s.LLM(ctx, &wgSecondStep, results, fmt.Sprintf(promt, summary, language), domain.DataTypeEnumRESULT)
 	wgSecondStep.Wait()
 
 	close(results)
