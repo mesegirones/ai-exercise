@@ -19,11 +19,10 @@ go run ./app
 ```
 
 ## Description 
-This project pretends to be a chat where given a sentence or a question from a user input, the system respond with a short fun fact from the main topic of the input and using the same slang an language than the one used by de user. 
+This project pretends to be a chat where given a sentence or a question from a user input, the system responds with a short fun fact from the main topic of the input using the same slang and language than the one used by the user.
 
 ## Future imporvements 
-For now, the project dosn't handel user data, although in the chat input there is parameter for the user id. A future improvement could be the user management, and saving all the topics the user has commented, in order to offer more user appealing fun facts. 
-
+For now, the project doesn't handel user data, although in the chat input there is parameter for the user id. A future improvement could be the user management, and saving all the topics the user has commented, in order to offer more user appealing fun facts. 
 
 ## Aditional information 
 As required, the project is containerised. I tried my best in this part but it's not my key point. 
